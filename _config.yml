@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Lisence Lab
+title: License Lab
 
 #What is the name of the events or talks you would like to host? (Example Brownbags, Talks, Lighting Talks)
-event_label: Lisence Lab
+event_label: License Lab
 
 description: > # this means to ignore newlines until "baseurl:"
   Simple Jekyll theme to host internal/external events happening in and around your area. Free free to contribute or fork the repo.

@@ -1,21 +1,286 @@
-<body>
-  <div class="login-wrapper">
-    
-   
-     
-    
-    <link rel="stylesheet" href="/create/main.css">
-    
-      <h2>Login</h2>
-      <a class="site-title" href="/">Lisence Lab</a> 
-      
-      <form method="post" action="서버의url" id="login-form">
-          <input type="text" name="userName" placeholder="Email or 전화번호">
-          <input type="password" name="userPassword" placeholder="Password">
-          <label for="remember-check">
-              <input type="checkbox" id="remember-check">아이디 저장하기
-          </label>
-          <input type="submit" value="Login">
-      </form>
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>License Lab</title>
+  <meta name="description" content="Simple Jekyll theme to host internal/external events happening in and around your area. Free free to contribute or fork the repo.
+">
+
+  <link rel="stylesheet" href="/evento/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/evento/create/">
+  <link rel="alternate" type="application/rss+xml" title="License Lab" href="http://localhost:4000/evento/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/evento/">License Lab</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+            
+                <a class="page-link" href="/evento/about/">login</a>
+            
+          
+        
+          
+            
+                <a class="page-link button button-primary" href="/evento/create/">회원가입</a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
   </div>
+
+</header>
+
+
+
+  <div class="blog-cover" style="background-image:url(http://app-beacon.com/wp-content/uploads/2015/05/events.jpg);">
+
+  </div>
+  
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <html lang="ko">
+
+<head>
+    <title>회원가입 페이지</title>
+
+    <link href="signup.css" rel="stylesheet" />
+    <script src="signup.js"></script>
+
+</head>
+<style>
+    * {
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 11px;
+}
+html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+body {
+    width: 45%;
+    border: 1px solid black;
+}
+input{
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper {
+    padding: 10px;
+}
+div {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+.title {
+    text-align: center;
+    font-weight: 700;
+}
+.email input {
+    width: 100%;
+}
+.name input {
+    width: 100%;
+}
+.password input {
+    width: 100%;
+}
+.passwordCheck input {
+    width: 100%;
+}
+.phone {
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+}
+#phone1 {
+    width: 18%;
+}
+#phone2 {
+    width: 30%;
+}
+#phone3 {
+    width: 30%;
+}
+.auth {
+    display: flex;
+    justify-content: space-between;
+}
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+.auth div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+.auth button {
+    width: 70%;
+}
+.timer div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+.timer button {
+    width: 70%;
+}
+.area select {
+    width: 100%;
+    height: 40px;
+}
+.gender {
+    text-align: center;
+}
+.signUp button {
+    width: 100%;
+    cursor:pointer;
+}
+button{
+    cursor: pointer;
+    height: 30px;
+}
+.error{
+    font-size: 1px;
+    height: 20px;
+    color:red;
+    font-weight: 700;
+}
+.blog-cover {
+    height: 0px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
+        <div class="email">
+            <input id="email" type="text" placeholder="이메일을 입력해 주세요." />
+            <div id="emailError" class="error"></div>
+        </div>
+        <div class="name">
+            <input id="name" type="text" placeholder="이름을 입력해 주세요." />
+            <div id="nameError" class="error"></div>
+        </div>
+        <div class="password">
+            <input id="password" type="password" placeholder="비밀번호를 입력해 주세요." />
+            <div id="passwordError" class="error"></div>
+        </div>
+        <div class="passwordCheck">
+            <input id="passwordCheck" type="password" placeholder="비밀번호를 다시 입력해 주세요." />
+            <div id="passwordCheckError" class="error"></div>
+        </div>
+        <div class="phone">
+            <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhone1()" /> -
+            <input id="phone2" type="text" size="3" maxlength="4" oninput="changePhone2()" /> -
+            <input id="phone3" type="text" size="3" maxlength="4" oninput="changePhone3()" />
+        </div>
+        <div class="auth">
+            <div id="certificationNumber">000000</div>
+            <button disabled="" id="sendMessage" onclick="getToken()">인증번호 전송</button>
+        </div>
+        <div class="timer">
+            <div id="timeLimit">03:00</div>
+            <button disabled="" id="completion" onclick="checkCompletion()">인증확인</button>
+        </div>
+        <div class="area">
+            <select id="area">
+                <option selected="" disabled="">지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>인천</option>
+                <option>경기</option>
+            </select>
+            <div id="areaError" class="error"></div>
+        </div>
+        <div class="gender">
+            <input id="gender_man" type="radio" name="gender" />남성  
+            <input id="gender_woman" type="radio" name="gender" />여성
+            <div id="genderError" class="error"></div>
+        </div>
+        <div class="line">
+            <hr />
+        </div>
+        <div class="signUp">
+            <button id="signUpButton" disabled="" onclick="signUpCheck()">가입하기</button>
+        </div>
+    </div>
+
 </body>
+
+</html>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">License Lab</h2>
+    <p>
+      Simple Jekyll theme to host internal/external events happening in and around your area. Free free to contribute or fork the repo.
+
+      <a href="https://github.com/boyney123/evento"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Evento</span></a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
